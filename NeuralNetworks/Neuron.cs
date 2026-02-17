@@ -17,6 +17,14 @@ namespace NeuralNetworks
                 Weights.Add(1);
             }
         }
+        public void SetWeights(params double[] weights)
+        {
+            //TODO: удалить после обучения сети
+            for (int i = 0; i < weights.Length; i++)
+            {
+                Weights[i] = weights[i];
+            }
+        }
         public double FeedForward(List<double> inputs)
         {
             // TO DO  добавить  проверку количество inputs = inputCount
@@ -28,7 +36,7 @@ namespace NeuralNetworks
             Output = Sigmoid(sum);
             return Output;
         }
-         private  double Sigmoid (double x)
+        private double Sigmoid(double x)
         {
             var result = 1.0 / (1.0 + Math.Pow(Math.E, -x));
             return result;
