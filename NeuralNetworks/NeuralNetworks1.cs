@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace NeuralNetworks
 {
-    public class NeuralNetworks
+    public class NeuralNetworks1
     {
         public Topology Topology { get; }
         public List<Layer> Layers { get; }
-        public NeuralNetworks(Topology topology)
+        public NeuralNetworks1(Topology topology)
         {
             Topology = topology;
             Layers = new List<Layer>();
