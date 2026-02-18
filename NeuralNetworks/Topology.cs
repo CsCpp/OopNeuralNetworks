@@ -1,7 +1,6 @@
-﻿
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
-namespace NeuralNetworks
+namespace MNeuralNetworks
 {
     public class Topology
     {

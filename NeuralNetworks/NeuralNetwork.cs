@@ -1,16 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace NeuralNetworks
+namespace MNeuralNetworks
 {
-    public class NeuralNetworks1
+    public class NeuralNetwork
     {
         public Topology Topology { get; }
         public List<Layer> Layers { get; }
-        public NeuralNetworks1(Topology topology)
+        public NeuralNetwork(Topology topology)
         {
             Topology = topology;
             Layers = new List<Layer>();
@@ -64,7 +62,7 @@ namespace NeuralNetworks
 
         private void FeedForwardAllLayersAfterInput(List<double> inputSignal)
         {
-            for (int i = 0; i < inputSignal.Count; i++)
+            for (int i = 1; i < Layers.Count; i++)
             {
                 var layer = Layers[i];
                 var previousLaersSignals = Layers[i - 1].GetSignals();
@@ -74,6 +72,7 @@ namespace NeuralNetworks
                 }
             }
         }
+
 
         private void SetSignalsToInputNeurons(List<double> inputSignal)
         {

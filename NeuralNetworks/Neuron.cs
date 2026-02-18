@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace NeuralNetworks
+namespace MNeuralNetworks
 {
     public class Neuron
     {

@@ -1,4 +1,4 @@
 <Solution>
-  <Project Path="NeuralNetworks/NeuralNetworks.csproj" />
-  <Project Path="TestNeuralNetworks/TestNeuralNetworks.csproj" />
+  <Project Path="NeuralNetworks/NeuralNetworks.csproj" Id="7f0c3c82-ae88-453d-8acb-534d2d31e897" />
+  <Project Path="TestNeuralNetworks/TestNeuralNetworks.csproj" Id="4865abb9-1649-45e4-94aa-7b380ba75b63" />
 </Solution>

@@ -1,5 +1,5 @@
 ﻿
-namespace NeuralNetworks
+namespace MNeuralNetworks
 {
    public enum NeuronType
     {

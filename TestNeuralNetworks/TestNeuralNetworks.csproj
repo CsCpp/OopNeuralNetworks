@@ -49,7 +49,7 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="UnitTest1.cs" />
+    <Compile Include="NeuralNetworkTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -57,7 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\NeuralNetworks\NeuralNetworks.csproj">
-      <Project>{7F0C3C82-AE88-453D-8ACB-534D2D31E897}</Project>
+      <Project>{7f0c3c82-ae88-453d-8acb-534d2d31e897}</Project>
       <Name>NeuralNetworks</Name>
     </ProjectReference>
   </ItemGroup>

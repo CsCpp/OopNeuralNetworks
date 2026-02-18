@@ -1,5 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using NeuralNetworks;
+using MNeuralNetworks;
 using System;
 using System.Collections.Generic;
 
@@ -12,7 +12,7 @@ namespace TestNeuralNetworks
         public void FeedForwardTest()
         {
             var topology = new Topology(4, 1, 2);
-            var neuralNetworks = new NeuralNetworks1(topology);
+            var neuralNetworks = new NeuralNetwork(topology);
             neuralNetworks.Layers[1].Neurons[0].SetWeights(0.5, -0.1, 0.3, -0.1);
             neuralNetworks.Layers[1].Neurons[1].SetWeights(0.1, -0.3, 0.7, -0.3);
             neuralNetworks.Layers[2].Neurons[0].SetWeights(1.2, 0.8);
