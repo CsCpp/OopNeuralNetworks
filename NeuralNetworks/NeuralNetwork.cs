@@ -48,6 +48,7 @@ namespace MNeuralNetworks
         }
         public Neuron FeedForward(params double[] inputSignal)
         {
+
             SetSignalsToInputNeurons(inputSignal);
             FeedForwardAllLayersAfterInput();
             if (Topology.OutputCount == 1)
@@ -67,13 +68,14 @@ namespace MNeuralNetworks
         /// <returns></returns>
         public double Learn(double[] expected, double[,] inputs, int epoch)
         {
+            var signals = Normalization(inputs);
             var error = 0.0;
             for (int i = 0; i < epoch; i++)
             {
                 for (int j = 0; j < expected.Length; j++)
                 {
                     var output = expected[j];
-                    var input = GetRow(inputs, j);
+                    var input = GetRow(signals, j);
                     error += BackPropagation(output, input);
                 }
             }
