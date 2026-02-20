@@ -13,7 +13,7 @@ namespace MNeuralNetworks
         {
             var result = new List<int>();
             var image = new Bitmap(path);
-            var resizeImage = new Bitmap(image, new Size(10, 10));
+            var resizeImage = new Bitmap(image, new Size(20, 20));
             Height = resizeImage.Height;
             Width = resizeImage.Width;
 

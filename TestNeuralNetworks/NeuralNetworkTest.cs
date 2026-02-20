@@ -104,7 +104,7 @@ namespace TestNeuralNetworks
         [TestMethod]
         public void RecognizeImage()
         {
-            var size = 100;
+            var size = 20;
             var parazitePath = (@"C:\\Image\Parazite");
             var unParazitePath = (@"C:\\Image\UnParazite");
             var converter = new PictureConverter();
@@ -117,10 +117,10 @@ namespace TestNeuralNetworks
             var neuralNetwork = new NeuralNetwork(topology);
 
             double[,] parazitInputs = GetData(parazitePath, converter, testParazitImage, size);
-            neuralNetwork.Learn(new double[] { 1 }, parazitInputs, 1);
+            neuralNetwork.Learn(new double[] { 1 }, parazitInputs, 3);
 
             double[,] unParazitInputs = GetData(unParazitePath, converter, testParazitImage, size);
-            neuralNetwork.Learn(new double[] { 0 }, unParazitInputs, 1);
+            neuralNetwork.Learn(new double[] { 0 }, unParazitInputs, 3);
 
             var par = neuralNetwork.Predict(testParazitImage.Select(t => (double)t).ToArray());
             var unPar = neuralNetwork.Predict(testUnParazitImage.Select(t => (double)t).ToArray());
