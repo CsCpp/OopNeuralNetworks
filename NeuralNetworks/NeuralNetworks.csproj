@@ -43,7 +43,11 @@
     <Compile Include="NeuralNetwork.cs" />
     <Compile Include="Neuron.cs" />
     <Compile Include="NeuronType.cs" />
+    <Compile Include="PictureConverter.cs" />
     <Compile Include="Topology.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Drawing" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
