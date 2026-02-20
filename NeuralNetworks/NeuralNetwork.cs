@@ -30,7 +30,6 @@ namespace MNeuralNetworks
             var outputLayer = new Layer(outputNeuron, NeuronType.Output);
             Layers.Add(outputLayer);
         }
-
         private void CreateHiddenLayers()
         {
             for (int j = 0; j < Topology.HidenLayers.Count; j++)
@@ -46,7 +45,7 @@ namespace MNeuralNetworks
                 Layers.Add(hiddenLayer);
             }
         }
-        public Neuron FeedForward(params double[] inputSignal)
+        public Neuron Predict(params double[] inputSignal)
         {
 
             SetSignalsToInputNeurons(inputSignal);
@@ -94,7 +93,7 @@ namespace MNeuralNetworks
         }
         private double BackPropagation(double expected, params double[] inputs)
         {
-            var actual = FeedForward(inputs).Output;
+            var actual = Predict(inputs).Output;
             var difference = actual - expected;
             foreach (var neuron in Layers.Last().Neurons)
             {
@@ -191,7 +190,6 @@ namespace MNeuralNetworks
 
             }
         }
-
         private void CreateInputLayrs()
         {
             var inputsNeuron = new List<Neuron>();

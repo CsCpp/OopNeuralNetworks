@@ -14,7 +14,7 @@ namespace TestNeuralNetworks
         public void ConvertTest()
         {
             var converter = new PictureConverter();
-
+           // var inputs = converter.Convert(@"OopNeuralNetworks\\TestNeuralNetworks\\Images\\Parasitized.png");
             var inputs = converter.Convert(@"C:\\Users\\RZA\\source\\repos\\OopNeuralNetworks\\TestNeuralNetworks\\Images\\Parasitized.png");
             converter.Save("c:\\image.png", inputs);
         }
