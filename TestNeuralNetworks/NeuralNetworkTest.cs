@@ -113,7 +113,7 @@ namespace TestNeuralNetworks
             var testParazitImage = converter.Convert(@"C:\\Users\\RZA\\source\\repos\\OopNeuralNetworks\\TestNeuralNetworks\\Images\\Parasitized.png");
             var testUnParazitImage = converter.Convert(@"C:\\Users\\RZA\\source\\repos\\OopNeuralNetworks\\TestNeuralNetworks\\Images\\UnParasitized.png");
 
-            var topology = new Topology(testParazitImage.Count, 1, 0.1, testParazitImage.Count / 2);
+            var topology = new Topology(testParazitImage.Length, 1, 0.1, testParazitImage.Length / 2);
             var neuralNetwork = new NeuralNetwork(topology);
 
             double[,] parazitInputs = GetData(parazitePath, converter, testParazitImage, size);
@@ -129,14 +129,14 @@ namespace TestNeuralNetworks
             Assert.AreEqual(0, Math.Round(unPar.Output, 2));
         }
 
-        private static double[,] GetData(string parazitePath, PictureConverter converter, List<int> testImageInput, int size)
+        private static double[,] GetData(string parazitePath, PictureConverter converter,double[]  testImageInput, int size)
         {
             var images = Directory.GetFiles(parazitePath);
-            var result = new double[size, testImageInput.Count];
+            var result = new double[size, testImageInput.Length];
             for (int i = 0; i < size; i++)
             {
                 var image = converter.Convert(images[i]);
-                for (int j = 0; j < image.Count; j++)
+                for (int j = 0; j < image.Length; j++)
                 {
                     result[i, j] = image[j];
                 }

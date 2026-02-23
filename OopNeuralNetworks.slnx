@@ -1,4 +1,5 @@
 <Solution>
+  <Project Path="MedicalAI/MedicalAI.csproj" Id="9635ca3b-90ec-482b-818b-5ccda1b0c75c" />
   <Project Path="NeuralNetworks/NeuralNetworks.csproj" Id="7f0c3c82-ae88-453d-8acb-534d2d31e897" />
   <Project Path="TestNeuralNetworks/TestNeuralNetworks.csproj" Id="4865abb9-1649-45e4-94aa-7b380ba75b63" />
 </Solution>

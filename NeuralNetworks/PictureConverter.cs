@@ -9,9 +9,9 @@ namespace MNeuralNetworks
         public int Height { get; set; }
         public int Width { get; set; }
         public int GroupSize { get; set; } = 100;
-        public List<int> Convert(string path)
+        public double[] Convert(string path)
         {
-            var result = new List<int>();
+            var result = new List<double>();
             var image = new Bitmap(path);
             var resizeImage = new Bitmap(image, new Size(20, 20));
             Height = resizeImage.Height;
@@ -27,7 +27,7 @@ namespace MNeuralNetworks
                 }
             }
 
-            return result;
+            return result.ToArray();
         }
 
         private int Brightness(Color pixel)
